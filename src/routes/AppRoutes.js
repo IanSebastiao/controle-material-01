@@ -11,6 +11,9 @@ import CadastroProdutoPage from '../pages/CadastroProdutoPage';
 import EditarProdutoPage from '../pages/EditarProdutoPage';
 import ConsultaEstoquePage from '../pages/ConsultaEstoquePage';
 import MovimentacoesPage from '../pages/MovimentacoesPage';
+import EntradasPage from '../pages/EntradasPage';
+import SaidasPage from '../pages/SaidasPage';
+import RelatoriosPage from '../pages/RelatoriosPage';
 import CadastroFornecedorPage from '../pages/CadastroFornecedorPage';
 import EditarUsuarioPage from '../pages/EditarUsuarioPage';
 import ConsultaUsuariosPage from '../pages/ConsultaUsuariosPage';
@@ -115,27 +118,12 @@ const AppRoutes = () => {
                 <Route path="/consulta-estoque" element={<ConsultaEstoquePage />} />
 
                 {/* Rotas de Movimentações */}
-                <Route
-                  path="/movimentacoes/nova"
-                  element={
-                    <MovimentacoesPage
-                      onSubmit={handleAddMovimentacao}
-                      mode="create"
-                    />
-                  }
-                />
-
-                <Route
-                  path="/movimentacoes/editar/:id"
-                  element={
-                    <MovimentacoesPage
-                      onSubmit={handleEditMovimentacao}
-                      mode="edit"
-                    />
-                  }
-                />
-
-                <Route path="/movimentacoes" element={<MovimentacoesPage />} />
+                <Route path="/movimentacoes" element={<MovimentacoesPage />}>
+                  <Route index element={<Navigate to="entradas" replace />} />
+                  <Route path="entradas" element={<EntradasPage />} />
+                  <Route path="saidas" element={<SaidasPage />} />
+                  <Route path="relatorios" element={<RelatoriosPage />} />
+                </Route>
 
                 {/* Rotas de Usuários - Apenas para Administradores */}
                 <Route
