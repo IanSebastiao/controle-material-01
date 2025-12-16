@@ -117,13 +117,13 @@ const AppRoutes = () => {
 
                 <Route path="/consulta-estoque" element={<ConsultaEstoquePage />} />
 
-                {/* Rotas de Movimentações */}
-                <Route path="/movimentacoes" element={<MovimentacoesPage />}>
-                  <Route index element={<Navigate to="entradas" replace />} />
-                  <Route path="entradas" element={<EntradasPage />} />
-                  <Route path="saidas" element={<SaidasPage />} />
-                  <Route path="relatorios" element={<RelatoriosPage />} />
-                </Route>
+                {/* Página de Movimentações */}
+                <Route path="/movimentacoes" element={<MovimentacoesPage />} />
+
+                {/* Rotas de Movimentações - Páginas Separadas */}
+                <Route path="/entradas" element={<EntradasPage />} />
+                <Route path="/saidas" element={<SaidasPage />} />
+                <Route path="/relatorios" element={<RelatoriosPage />} />
 
                 {/* Rotas de Usuários - Apenas para Administradores */}
                 <Route

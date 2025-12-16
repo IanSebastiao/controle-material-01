@@ -1,6 +1,6 @@
 // MovimentacoesPage.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 import './MovimentacoesPage.css';
 
 const MovimentacoesPage = () => {
