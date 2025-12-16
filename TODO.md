@@ -1,0 +1,5 @@
+- [ ] Modify SaidasPage.js to add onBack prop and back button
+- [ ] Update MovimentacoesPage.js to import EntradasPage, SaidasPage, RelatoriosPage
+- [ ] Add state for currentView in MovimentacoesPage
+- [ ] Change h4 titles to buttons with onClick to set currentView
+- [ ] Add conditional rendering in MovimentacoesPage to show the respective page based on currentView
